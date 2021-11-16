@@ -1,0 +1,99 @@
+ html, body {
+        height: 100%;
+        margin: 0px;
+    }
+    
+.hr3 {
+  border: 0;
+  height: 3px;
+  background-image: linear-gradient(to right, transparent, #CCC, transparent);  
+}
+
+#pagina{
+	height: 100%;
+}
+
+.container{
+	height: 100%;
+}
+
+/* sidebar */
+#sidebar-pagina{
+	z-index: 1;
+	position: fixed;
+	width:0;
+	height: 100%;
+	overflow-y: hidden;
+	background: #6495ED;
+	opacity: 1; 	
+}
+
+
+/* conteudo da pagina */
+.container-fluid{
+	overflow: hidden; 
+	height:100%
+}
+#content-pagina{
+	width: 100%;
+	position: absolute;
+	padding: 15px;
+}
+
+/* sidebar displayed */
+#pagina.menuDisplayed #sidebar-pagina{
+	
+	width: 200px;
+	height: 100%;
+	border-bottom-right-radius: 15px; 
+	border-top-right-radius: 15px;
+}
+
+#pagina.menuDisplayed #content-pagina{
+	padding-left: 250px;
+	
+}
+
+
+#sidebar-toggle{
+	color: white;
+	text-shadow: none;
+}
+.sidebar-nav{
+	padding: 0;
+	list-style:none;
+}
+.sidebar-nav li{ 
+	font:menu;
+	font-size: 12px; 
+	
+	text-indent: 20px;
+	line-height: 40px;
+	text-shadow: none;
+}
+.sidebar-nav li a{
+	display: block;
+	text-decoration: none;
+	text-shadow: none;
+	color: white;
+}
+
+.sidebar-nav li a:hover{
+	background: #191970	 ;
+}
+
+#botao{
+	width: 100px;
+	height: 80px;
+	float: left;
+	
+	align-content: center;
+}
+
+
+
+#tabela{
+	padding-right: 50px; 
+}
+
+

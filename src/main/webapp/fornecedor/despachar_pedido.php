@@ -1,0 +1,16 @@
+<?php
+
+	session_start();
+	include('../verifica_login.php');
+	include_once("config.php");
+	
+	$idPedido = mysqli_real_escape_string($conexao, $_POST['idPedido']);
+	$rastreio = mysqli_real_escape_string($conexao, $_POST['rastreio']);
+	
+	$result_alter_pedido = "UPDATE `pedido` SET `codigoDeRastreio` = '$rastreio',  `status` = '7' WHERE `pedido`.`id` = $idPedido";
+	$resultado_alter_pedido = mysqli_query($conexao, $result_alter_pedido);
+	
+	$_SESSION['pedido_atualizado'] = true;
+	header('Location: pedido.php?idPedido='.$idPedido);
+	
+	?>
